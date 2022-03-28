@@ -43,4 +43,19 @@ public class FinalProject {
 		            System.out.println("We do not diliver to your state.");
 		    }
 	  }
-}
+		   
+
+	  			public static void  BoxPrices ()
+		            {
+		        		
+		        		int[][] numbers = { {5}, {13}, {18} };
+		        	
+		        		System.out.println("Small Box Cost:" + numbers [0][0]);
+		        		System.out.println("Medium Box Cost:" + numbers [1][1]);
+		        		System.out.println("Big Box Cost:" + numbers [2][2]);
+		        		System.out.println();
+		            
+		        	
+		    
+		    }
+	  }
