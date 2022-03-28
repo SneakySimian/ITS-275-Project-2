@@ -1,0 +1,46 @@
+package finalProject;
+
+import java.util.Scanner;
+
+public class FinalProject {
+	  public static void main(String[] args) {
+		    int state;		
+		    
+		    Scanner keyboard = new Scanner(System.in);
+		    
+		    System.out.println("1=NC, 2=SC");
+		    System.out.println("3=TX, 4=AL");
+		    System.out.println("5=LA, 6=FL");
+		    System.out.println("7=GA, 0= If you don't see your states initals");
+		    
+		    System.out.print("Where are you dilivering to? ");
+		      state = keyboard.nextInt();
+		      
+		    switch (state) {
+		      case 1:
+		        System.out.println("We diliver To North Carolina");
+		        break;
+		      case 2:
+		        System.out.println("We diliver to South Carolina");
+		        break;
+		      case 3:
+		        System.out.println("We diliver to Texas");
+		        break;
+		      case 4:
+		        System.out.println("We diliver to Alabama");
+		       break;
+		      case 5:
+		        System.out.println("We diliver to Louisiana");
+		       break;
+		      case 6:
+		        System.out.println("We diliver to Florida");
+		       break;
+		      case 7:
+		        System.out.println("We diliver to Gorgia");
+		        break;
+		        
+		      default:
+		            System.out.println("We do not diliver to your state.");
+		    }
+	  }
+}
