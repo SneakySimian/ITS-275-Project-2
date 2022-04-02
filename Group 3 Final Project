@@ -52,9 +52,9 @@ public class FinalProject {
 		           
 		            	final int SIZE = 4;
 		            	String[] names = new String [SIZE];
-		            	names[0] = "Small Box = $13";
-		            	names[1] = "Medium Box = $16";
-		            	names[2] = "Large Box = $19";
+		            	names[0] = "Small Box = 0";
+		            	names[1] = "Medium Box = 1";
+		            	names[2] = "Large Box = 2";
 		            	
 		            	
 		            	//Uppercase--> method
@@ -70,6 +70,16 @@ public class FinalProject {
 		            	      
 		            	   System.out.println();
 
-		            }
+		            	   System.out.print("What size do you want? ");
+		     		      int Box = keyboard.nextInt();
+		     		      if (Box==0 ); {
+		            System.out.println("That will be and extra $13");
+		     		      }
+		             if (Box==1 ); {
+			            System.out.println("That will be and extra $16");
+
+		     		      }
+		     		      
 
 }
+	}
