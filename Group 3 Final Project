@@ -72,12 +72,14 @@ public class FinalProject {
 
 		            	   System.out.print("What size do you want? ");
 		     		      int Box = keyboard.nextInt();
-		     		      if (Box==0 ); {
-		            System.out.println("That will be and extra $13");
-		     		      }
-		             if (Box==1 ); {
-			            System.out.println("That will be and extra $16");
-
+		     		     if (Box==0 ) {
+		     		    	  System.out.println("That will be and extra $13");
+		     		     }
+		     		     else if (Box==1 ) {
+		     		      		System.out.println("That will be and extra $16");
+		     		      	}
+		     		      	else if (Box==2 ) {
+				            System.out.println("That will be and extra $19");
 		     		      }
 		     		      
 
