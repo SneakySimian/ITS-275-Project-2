@@ -2,61 +2,74 @@ package finalProject;
 
 import java.util.Scanner;
 
+import java.util.Arrays;
+
 public class FinalProject {
-	  public static void main(String[] args) {
+	  
+
+	
+	
+	public static void main(String[] args) {
 		    int state;		
 		    
 		    Scanner keyboard = new Scanner(System.in);
 		    
-		    System.out.println("1 = NC, " + "2 = SC, " + "3 = TX, " + "4 = AL, " + 
-		     "5 = LA, " + "6 = FL " + "7 = GA." );
+		    System.out.println("1=NC, 2=SC");
+		    System.out.println("3=TX, 4=AL");
+		    System.out.println("5=LA, 6=FL");
+		    System.out.println("7=GA, 0= If you don't see your states initals");
 		    
-		    System.out.println("0= If you don't see your state abbreviations");
-		    
-		    System.out.print("Where are you trying to deliver to? " + "\n"
-		    + "Please enter the corresponding number with the state's abbreviation");
+		    System.out.print("Where are you dilivering to? ");
 		      state = keyboard.nextInt();
 		      
 		    switch (state) {
 		      case 1:
-		        System.out.println("We do deliver To North Carolina!");
+		        System.out.println("We diliver To North Carolina");
 		        break;
 		      case 2:
-		        System.out.println("We do deliver to South Carolina!");
+		        System.out.println("We diliver to South Carolina");
 		        break;
 		      case 3:
-		        System.out.println("We do deliver to Texas!");
+		        System.out.println("We diliver to Texas");
 		        break;
 		      case 4:
-		        System.out.println("We do deliver to Alabama!");
+		        System.out.println("We diliver to Alabama");
 		       break;
 		      case 5:
-		        System.out.println("We do deliver to Louisiana!");
+		        System.out.println("We diliver to Louisiana");
 		       break;
 		      case 6:
-		        System.out.println("We do deliver to Florida!");
+		        System.out.println("We diliver to Florida");
 		       break;
 		      case 7:
-		        System.out.println("We do deliver to Gorgia!");
+		        System.out.println("We diliver to Gorgia");
 		        break;
 		        
 		      default:
-		            System.out.println('\n' + "Sorry, but unfortunately we do not deliver to your state.");
+		            System.out.println("We do not diliver to your state.");
 		    }
-	  }
-		   
 
-	  			public static void  BoxPrices ()
-		            {
-		        		
-		        		int[][] numbers = { {5}, {13}, {18} };
-		        	
-		        		System.out.println("Small Box Cost:" + numbers [0][0]);
-		        		System.out.println("Medium Box Cost:" + numbers [1][1]);
-		        		System.out.println("Big Box Cost:" + numbers [2][2]);
-		        		System.out.println();
-		            
-		        	
-		    
-		    }
-	  }
+		           
+		            	final int SIZE = 4;
+		            	String[] names = new String [SIZE];
+		            	names[0] = "Small Box = $13";
+		            	names[1] = "Medium Box = $16";
+		            	names[2] = "Large Box = $19";
+		            	
+		            	
+		            	//Uppercase--> method
+		            	  System.out.println(names[0]);
+		            	  System.out.println(names[1]);
+		            	  System.out.println(names[2]);
+		            	  
+		            	  System.out.println();
+		            	  
+		            	 //CharAt--> single character at a specified location
+		            	  char letter = names[2].charAt(0);
+		            	   System.out.print(letter);
+		            	      
+		            	   System.out.println();
+
+		            }
+
+}
