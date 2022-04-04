@@ -1,25 +1,49 @@
-package finalProject;
+/** The goal of our project is to develop a program that determines the price for shipping.
+ *  More specifically determining the time it takes to mail something from one location to another, 
+ *  calculating shipping price based on shipping time. There will also be an added price for different-sized boxes. 
+ *  (Bigger =more money) 
+*/
 
+/**
+ * The group members for this project are Seth, Josiah, and Samantha.
+ */
+// This is the name of our package for our project code.
+package finalProject;
+// Here, we imported a scanner to read the system out prints.
 import java.util.Scanner;
 
+// Similar to the scanner, we imported this to read the arrays.
 import java.util.Arrays;
 
-public class FinalProject {
+// This is the name of our class and package.
+public class finalProject {
 	  
 
+	public static void main(String[] args) 
 	
+	{
 	
-	public static void main(String[] args) {
 		    int state;		
-		    
+		    //The scanner keyboard is necessary for eclipse to read the following system.out.println
 		    Scanner keyboard = new Scanner(System.in);
 		    
+		    // This is what the user should see when the program starts. 
+			System.out.println("Welcome to our Program! \n");
+			// Here, we give a basic description of the purpose of our program,
+			// informing the user about the program. 
+			System.out.println("With this program, you can calculate cost of shipping. \n");
+		    
+		    // These system.out.printlns should be visible to the
+			// user when the program starts.
+			// Here, we've indicated the states that are available for a user to ship to.
+			// More to this, we corresponded each given state with a number. 
 		    System.out.println("1=NC, 2=SC");
 		    System.out.println("3=TX, 4=AL");
 		    System.out.println("5=LA, 6=FL");
 		    System.out.println("7=GA, 0= If you don't see your states initals");
 		    
-		    System.out.print("Where are you dilivering to? ");
+		 
+		    System.out.print("Let's get started, where are you dilivering to? ");
 		      state = keyboard.nextInt();
 		      
 		    switch (state) {
@@ -70,16 +94,16 @@ public class FinalProject {
 		            	      
 		            	   System.out.println();
 
-		            	   System.out.print("What size do you want? ");
+		            	   System.out.print("Great, what size do you want? ");
 		     		      int Box = keyboard.nextInt();
 		     		     if (Box==0 ) {
-		     		    	  System.out.println("That will be and extra $13");
+		     		    	  System.out.println("For a small size, that will be and extra $13");
 		     		     }
 		     		     else if (Box==1 ) {
-		     		      		System.out.println("That will be and extra $16");
+		     		      		System.out.println("For a medium size, that will be and extra $16");
 		     		      	}
 		     		      	else if (Box==2 ) {
-				            System.out.println("That will be and extra $19");
+				            System.out.println("For a large size, that will be and extra $19");
 		     		      }
 		     		      
 
