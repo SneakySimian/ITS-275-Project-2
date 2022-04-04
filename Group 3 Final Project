@@ -12,7 +12,8 @@ package finalProject;
 // Here, we imported a scanner to read the system out prints.
 import java.util.Scanner;
 
-// Similar to the scanner, we imported this to read the arrays.
+// Here, we imported the statement, import java.util.Arrays;, 
+// to call the String method on array elements.
 import java.util.Arrays;
 
 // This is the name of our class and package.
@@ -40,51 +41,63 @@ public class finalProject {
 		    System.out.println("1=NC, 2=SC");
 		    System.out.println("3=TX, 4=AL");
 		    System.out.println("5=LA, 6=FL");
-		    System.out.println("7=GA, 0= If you don't see your states initals");
+		    System.out.println("7=GA, 0= If you don't see your states initals. \n");
 		    
-		 
-		    System.out.print("Let's get started, where are you dilivering to? ");
+		 // Here, the user can input what state he or she would like to ship to.
+		    System.out.print("Let's get started, where are you shipping to? ");
 		      state = keyboard.nextInt();
-		      
+		    // This is the start of our switch statement.   
 		    switch (state) {
 		      case 1:
+		    	  // Delivery is available to NC.
 		        System.out.println("We diliver To North Carolina");
 		        break;
 		      case 2:
+		    	  // Delivery is available to SC.
 		        System.out.println("We diliver to South Carolina");
 		        break;
 		      case 3:
+		    	 // Delivery is available to TX.
 		        System.out.println("We diliver to Texas");
 		        break;
 		      case 4:
+		    	  // Delivery is available to AL.
 		        System.out.println("We diliver to Alabama");
 		       break;
 		      case 5:
+		    	  // Delivery is available to LA.
 		        System.out.println("We diliver to Louisiana");
 		       break;
 		      case 6:
+		    	  // Delivery is available to FL.
 		        System.out.println("We diliver to Florida");
 		       break;
 		      case 7:
+		    	  // Delivery is available to GA.
 		        System.out.println("We diliver to Gorgia");
 		        break;
 		        
+		        // This is the message to the user if delivery is not
+		        // available to his or her state. 
 		      default:
 		            System.out.println("We do not diliver to your state.");
 		    }
 
-		           
+		           // Each element of these arrays are initialized.
+		    	   // Each array corresponds with a size.
 		            	final int SIZE = 4;
 		            	String[] names = new String [SIZE];
 		            	names[0] = "Small Box = 0";
 		            	names[1] = "Medium Box = 1";
 		            	names[2] = "Large Box = 2";
 		            	
-		            	
-		            	//Uppercase--> method
-		            	  System.out.println(names[0]);
-		            	  System.out.println(names[1]);
-		            	  System.out.println(names[2]);
+		            	// String objects have many methods, 
+		            	// here, we use the toUppercase--> method
+		            	// This is an example of an array.
+		            	// The first bracket on each line indicates a row.
+		            	  System.out.println(names[0].toUpperCase());
+		            	  System.out.println(names[1].toUpperCase());
+		            	  System.out.println(names[2].toUpperCase());
 		            	  
 		            	  System.out.println();
 		            	  
