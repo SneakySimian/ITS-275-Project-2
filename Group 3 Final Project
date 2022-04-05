@@ -38,49 +38,53 @@ public class finalProject {
 			// user when the program starts.
 			// Here, we've indicated the states that are available for a user to ship to.
 			// More to this, we corresponded each given state with a number. 
-		    System.out.println("1=NC, 2=SC");
-		    System.out.println("3=TX, 4=AL");
-		    System.out.println("5=LA, 6=FL");
-		    System.out.println("7=GA, 0= If you don't see your states initals. \n");
+			System.out.println("1 = NC, " + "2 = SC, " + "3 = TX, " + "4 = AL, " +
+		             "5 = LA, " + "6 = FL " + "7 = GA." );
+		    System.out.println("0= If you don't see your state abbreviations");
+
 		    
 		 // Here, the user can input what state he or she would like to ship to.
-		    System.out.print("Let's get started, where are you shipping to? ");
-		      state = keyboard.nextInt();
-		    // This is the start of our switch statement.   
-		    switch (state) {
-		      case 1:
-		    	  // Delivery is available to NC.
-		        System.out.println("We diliver To North Carolina");
-		        break;
-		      case 2:
-		    	  // Delivery is available to SC.
-		        System.out.println("We diliver to South Carolina");
-		        break;
-		      case 3:
-		    	 // Delivery is available to TX.
-		        System.out.println("We diliver to Texas");
-		        break;
-		      case 4:
-		    	  // Delivery is available to AL.
-		        System.out.println("We diliver to Alabama");
-		       break;
-		      case 5:
-		    	  // Delivery is available to LA.
-		        System.out.println("We diliver to Louisiana");
-		       break;
-		      case 6:
-		    	  // Delivery is available to FL.
-		        System.out.println("We diliver to Florida");
-		       break;
-		      case 7:
-		    	  // Delivery is available to GA.
-		        System.out.println("We diliver to Gorgia");
-		        break;
+            
+            System.out.print("Where are you trying to deliver to? " + "\n"
+            + "Please enter the corresponding number with the state's abbreviation--");
+            
+              state = keyboard.nextInt();
+            // This is the start of our switch statement.
+            switch (state) {
+              case 1:
+            // Delivery is available to NC.
+                System.out.println("We do deliver To North Carolina!");
+                break;
+              case 2:
+            // Delivery is available to SC.
+                System.out.println("We do deliver to South Carolina!");
+                break;
+              case 3:
+            // Delivery is available to TX.
+                System.out.println("We do deliver to Texas!");
+                break;
+              case 4:
+            // Delivery is available to AL.
+                System.out.println("We do deliver to Alabama!");
+               break;
+              case 5:
+            // Delivery is available to LA. 
+                System.out.println("We do deliver to Louisiana!");
+               break;
+              case 6:
+            // Delivery is available to FL.
+                System.out.println("We do deliver to Florida!");
+               break;
+              case 7:
+            // Delivery is available to GA.
+                System.out.println("We do deliver to Georgia!");
+                break;
+
 		        
 		        // This is the message to the user if delivery is not
 		        // available to his or her state. 
 		      default:
-		            System.out.println("We do not diliver to your state.");
+		    	  System.out.println('\n' + "Sorry, but unfortunately we do not deliver to your state.");
 		    }
 
 		           // Each element of these arrays are initialized.
