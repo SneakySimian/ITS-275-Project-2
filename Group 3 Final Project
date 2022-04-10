@@ -16,6 +16,22 @@ import java.util.Scanner;
 // to call the String method on array elements.
 import java.util.Arrays;
 
+
+class location {
+// this is an example of an inheritance class.
+// this includes methods and fields for this class.
+}
+
+class State extends location {
+// extends is the keyword used in this inheritance class.
+// the methods and fields in this example are State,
+// and location.
+// The State extends the location. 
+// The user should input the specific state that he or she,
+// wants to ship to, the specific location. 
+}
+
+
 // This is the name of our class and package.
 public class finalProject {
 	  
@@ -53,31 +69,31 @@ public class finalProject {
 		    switch (state) {
 		      case 1:
 		    	  // Delivery is available to NC.
-		        System.out.println("We diliver To North Carolina");
+		        System.out.println("We deliver To North Carolina");
 		        break;
 		      case 2:
 		    	  // Delivery is available to SC.
-		        System.out.println("We diliver to South Carolina");
+		        System.out.println("We deliver to South Carolina");
 		        break;
 		      case 3:
 		    	 // Delivery is available to TX.
-		        System.out.println("We diliver to Texas");
+		        System.out.println("We deliver to Texas");
 		        break;
 		      case 4:
 		    	  // Delivery is available to AL.
-		        System.out.println("We diliver to Alabama");
+		        System.out.println("We deliver to Alabama");
 		       break;
 		      case 5:
 		    	  // Delivery is available to LA.
-		        System.out.println("We diliver to Louisiana");
+		        System.out.println("We deliver to Louisiana");
 		       break;
 		      case 6:
 		    	  // Delivery is available to FL.
-		        System.out.println("We diliver to Florida");
+		        System.out.println("We deliver to Florida");
 		       break;
 		      case 7:
 		    	  // Delivery is available to GA.
-		        System.out.println("We diliver to Gorgia");
+		        System.out.println("We deliver to Gorgia");
 		        break;
 		        
 		        // This is the message to the user if delivery is not
@@ -125,28 +141,3 @@ public class finalProject {
 
 }
 	}
-	
-    return Box;
-		   
-
-		   /**
-		      The getGrade method returns a letter grade
-		      determined from the score field.
-		      @return The letter grade.
-		   */
-
-		   public String shipingPrice()
-		   {
-		      String shipingPrice = null ;
-
-		      if (Box >= 0)
-		         shipingPrice = "$18";
-		      else if (Box >= 1)
-		         shipingPrice = "$21";
-		      else if (Box >= 2)
-		         shipingPrice = "$24";
-		      
-
-		      return shipingPrice;
-		   
-		   }
