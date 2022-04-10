@@ -126,3 +126,27 @@ public class finalProject {
 }
 	}
 	
+    return Box;
+		   
+
+		   /**
+		      The getGrade method returns a letter grade
+		      determined from the score field.
+		      @return The letter grade.
+		   */
+
+		   public String shipingPrice()
+		   {
+		      String shipingPrice = null ;
+
+		      if (Box >= 0)
+		         shipingPrice = "$18";
+		      else if (Box >= 1)
+		         shipingPrice = "$21";
+		      else if (Box >= 2)
+		         shipingPrice = "$24";
+		      
+
+		      return shipingPrice;
+		   
+		   }
