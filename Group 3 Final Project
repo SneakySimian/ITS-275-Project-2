@@ -161,4 +161,12 @@ public class finalProject {
 		     			return 5;
 		     		}
 		     		
+		 public void SuperClass1()
+ 		{
+		     			 
+		     			 
+		     			 System.out.println("This is your total price for shiping");
+		     		    System.out.println(Box + 5);
+		     		 }
+		     		}
 }
