@@ -12,7 +12,7 @@ package finalProject;
 // Here, we imported a scanner to read the system out prints.
 import java.util.Scanner;
 
-import practiceRoom.PracticeRoom;
+
 
 // Here, we imported the statement, import java.util.Arrays;, 
 // to call the String method on array elements.
@@ -33,14 +33,27 @@ class State extends location {
 // wants to ship to, the specific location. 
 }
 
-
 // This is the name of our class and package.
 public class finalProject {
 	  
-	finalProject(){
-		
+	// Shows price of cheapest box with shipping 
+	public int sum(int x, int y)
+	{
+		return (x + y);
 	}
 
+	// Shows Price of Second most Expensive box with shipping 
+	public double sum(double x, double y, double z)
+	{
+		return (x + y + z);
+	}
+
+	// Shows the price of most expensive box with shipping 
+	public double sum(double x, double y)
+	{
+		return (x + y);
+	}
+	
 	public static void main(String[] args) 
 	
 	{
@@ -54,12 +67,19 @@ public class finalProject {
 			// Here, we give a basic description of the purpose of our program,
 			// informing the user about the program. 
 			System.out.println("With this program, you can calculate cost of shipping. \n");
-		    
-		    // These system.out.printlns should be visible to the
+			// this gives the variables the numbers 
+			finalProject s = new finalProject();
+			System.out.println("This is the Potintal Prices:");
+			System.out.println(s.sum(13.0, 5.0));
+			System.out.println(s.sum(16.0, 5.0, 0.0));
+			System.out.println(s.sum(19.0, 5.0));
+		   
+			// These system.out.printlns should be visible to the
 			// user when the program starts.
 			// Here, we've indicated the states that are available for a user to ship to.
 			// More to this, we corresponded each given state with a number. 
-		    System.out.println("1=NC, 2=SC");
+		  System.out.println("States:");
+			System.out.println("1=NC, 2=SC");
 		    System.out.println("3=TX, 4=AL");
 		    System.out.println("5=LA, 6=FL");
 		    System.out.println("7=GA, 0= If you don't see your states initals. \n");
@@ -138,35 +158,33 @@ public class finalProject {
 		     		      	}
 		     		      	else if (Box==2 ) {
 				            System.out.println("For a large size, that will be and extra $19");
-		     		      }
+		     		      	}
 		     	
 		     		    int objectCount;
 		     			  
-		     		    // Create three instances of the 
-		     		   // Countable class.
+		     		    //  This makes three instances of the 
+		     		   //  class.
 		     		   finalProject object1 = new finalProject();
 		     		  finalProject object2 = new finalProject();
 		     		 finalProject object3 = new finalProject();
 
-		     		   // Get the number of instances from
-		     		   // the class's static field.
+		     		   
+		     		 //This calls the statics from above and prints the words
 		     		   objectCount = ( object1).getInstanceCount();
 		     		   System.out.println(objectCount + 
 		     		                 " dollars is the shiping cost to diliver to  " +
 		     		                 "eligable states.");
 		     		}
-
+// this tells you the cost to ship to each eligible state
 		     		private int getInstanceCount() {
 		     			
 		     			return 5;
 		     		}
-		     		
-		 public void SuperClass1()
- 		{
+		     		 public void SuperClass1()
+		     		 {
 		     			 
 		     			 
-		     			 System.out.println("This is your total price for shiping");
-		     		    System.out.println(Box + 5);
+		     		 
 		     		 }
+		     		
 		     		}
-}
