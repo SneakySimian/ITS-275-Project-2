@@ -12,6 +12,8 @@ package finalProject;
 // Here, we imported a scanner to read the system out prints.
 import java.util.Scanner;
 
+import practiceRoom.PracticeRoom;
+
 // Here, we imported the statement, import java.util.Arrays;, 
 // to call the String method on array elements.
 import java.util.Arrays;
@@ -137,7 +139,26 @@ public class finalProject {
 		     		      	else if (Box==2 ) {
 				            System.out.println("For a large size, that will be and extra $19");
 		     		      }
-		     		      
+		     	
+		     		    int objectCount;
+		     			  
+		     		    // Create three instances of the 
+		     		   // Countable class.
+		     		   finalProject object1 = new finalProject();
+		     		  finalProject object2 = new finalProject();
+		     		 finalProject object3 = new finalProject();
 
+		     		   // Get the number of instances from
+		     		   // the class's static field.
+		     		   objectCount = ( object1).getInstanceCount();
+		     		   System.out.println(objectCount + 
+		     		                 " dollars is the shiping cost to diliver to  " +
+		     		                 "eligable states.");
+		     		}
+
+		     		private int getInstanceCount() {
+		     			
+		     			return 5;
+		     		}
+		     		
 }
-	}
