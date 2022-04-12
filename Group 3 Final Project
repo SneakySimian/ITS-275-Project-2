@@ -29,10 +29,46 @@ class State extends location {
 // The user should input the specific state that he or she,
 // wants to ship to, the specific location. 
 }
+//This is how we use the method override.
+//We use the override to start the program and use the opening messages to the user.
+class Intro {
+    void show()
+    {
+    	System.out.println("Welcome to our Program! \n");
+    }
+}
+ //Where the actual override takes place.
+class Intro2 extends Intro {
+    
+    @Override
+    void show()
+    {
+    	System.out.println("With this program, you can calculate cost of shipping. \n");
+    }
+}
+//This is where we have placed our abstract class.
+//Here we have placed all the states we are shipping to, and the corresponding number of the state.
+abstract class StateNames {
+
+	 
+	  public void namep1() {
+		  	System.out.println('\n' + "Here are the available states that we currently ship to!");
+		  	System.out.println("1= North Carolina" + '\n' + "2= South Carolina");
+		    System.out.println("3= Georgia" + '\n' + "4= Florida");    
+	  }
+	}
+	class Names extends StateNames {
+	  public void namep2() {
+		  	System.out.println("5= Alabama" + '\n' + "6= Mississippi");
+		    System.out.println("7= Louisiana" + '\n' + "8= Texas");
+		    System.out.println("9= Tennessee" + '\n' + "0= If you do not see the desired state \n");
+	  }
+	}
+
 
 // This is the name of our class and package.
 public class finalProject {
-	  
+	  //This is our method overload, where we have determined the price and names of the boxes.
 		// Shows price of cheapest box with shipping 
 		public static int sum(int x, int y)
 		{
@@ -54,7 +90,7 @@ public class finalProject {
 		static int smallBox() {
 		return sum(13, 5);
 		}
-		//The medium size box method
+		//The Medium size box method
 		static int medBox() {
 		return sum(13, 8);
 		}
@@ -69,52 +105,18 @@ public static void main(String[] args) {
 		    //The scanner keyboard is necessary for eclipse to read the following system.out.println
 		    Scanner keyboard = new Scanner(System.in);
 		    
-		    class Intro {
-		        void show()
-		        {
-		        	System.out.println("Welcome to our Program! \n");
-		        }
-		    }
-		      
-		    class Intro2 extends Intro {
-		        
-		        @Override
-		        void show()
-		        {
-		        	System.out.println("With this program, you can calculate cost of shipping. \n");
-		        }
-		    }
-		    
+//This is where we call the override to start the introduction
 		    Intro obj1 = new Intro();
 		    obj1.show();
 		    Intro obj2 = new Intro2();
 		    obj2.show();
 		   
-			// this gives the variables the numbers 
+			//Where we call our method overloading and print the sizes and prices of the boxes. 
 			System.out.println("Smallest box shipping price:" + ' ' + '$' + smallBox());
 			System.out.println("Medium box shipping price:" + ' ' + '$' + medBox());
 			System.out.println("Largest box shipping price:" + ' ' + '$' + largeBox());
 		   
-			// These system.out.printlns should be visible to the
-			// user when the program starts.
-			// Here, we've indicated the states that are available for a user to ship to.
-			// More to this, we corresponded each given state with a number. 
-			abstract class StateNames {
-
-				 
-				  public void namep1() {
-					  	System.out.println('\n' + "Here are the available states that we currently ship to!");
-					  	System.out.println("1= North Carolina" + '\n' + "2= South Carolina");
-					    System.out.println("3= Georgia" + '\n' + "4= Florida");    
-				  }
-				}
-				class Names extends StateNames {
-				  public void namep2() {
-					  	System.out.println("5= Alabama" + '\n' + "6= Mississippi");
-					    System.out.println("7= Louisiana" + '\n' + "8= Texas");
-					    System.out.println("9= Tennessee" + '\n' + "0= If you do not see the desired state \n");
-				  }
-				}
+			//Where we call our abstract class to show the user the available states to ship to.
 			Names area = new Names(); 
 		    area.namep1();
 		    area.namep2();
