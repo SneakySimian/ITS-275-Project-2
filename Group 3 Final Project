@@ -1,7 +1,7 @@
 /** The goal of our project is to develop a program that determines the price for shipping.
  *  More specifically determining the time it takes to mail something from one location to another, 
  *  calculating shipping price based on shipping time. There will also be an added price for different-sized boxes. 
- *  (Bigger =more money) 
+ *  (Bigger = more money) 
 */
 
 /**
@@ -11,9 +11,6 @@
 package finalProject;
 // Here, we imported a scanner to read the system out prints.
 import java.util.Scanner;
-
-
-
 // Here, we imported the statement, import java.util.Arrays;, 
 // to call the String method on array elements.
 import java.util.Arrays;
@@ -36,155 +33,191 @@ class State extends location {
 // This is the name of our class and package.
 public class finalProject {
 	  
-	// Shows price of cheapest box with shipping 
-	public int sum(int x, int y)
-	{
-		return (x + y);
-	}
-
-	// Shows Price of Second most Expensive box with shipping 
-	public double sum(double x, double y, double z)
-	{
-		return (x + y + z);
-	}
-
-	// Shows the price of most expensive box with shipping 
-	public double sum(double x, double y)
-	{
-		return (x + y);
-	}
+		// Shows price of cheapest box with shipping 
+		public static int sum(int x, int y)
+		{
+			return (x + y);
+		}
 	
-	public static void main(String[] args) 
+		// Shows Price of Second most Expensive box with shipping 
+		public float sum(float x, float y)
+		{
+			return (x + y);
+		}
 	
-	{
-	
+		// Shows the price of most expensive box with shipping 
+		public double sum(double x, double y)
+		{
+			return (x + y);
+		}
+		//The Smallest box method
+		static int smallBox() {
+		return sum(13, 5);
+		}
+		//The medium size box method
+		static int medBox() {
+		return sum(13, 8);
+		}
+		//The Largest size box method
+		static int largeBox() {
+		return sum (13, 11);
+		} 
+		
+		
+public static void main(String[] args) {
 		    int state;		
 		    //The scanner keyboard is necessary for eclipse to read the following system.out.println
 		    Scanner keyboard = new Scanner(System.in);
 		    
-		    // This is what the user should see when the program starts. 
-			System.out.println("Welcome to our Program! \n");
-			// Here, we give a basic description of the purpose of our program,
-			// informing the user about the program. 
-			System.out.println("With this program, you can calculate cost of shipping. \n");
+		    class Intro {
+		        void show()
+		        {
+		        	System.out.println("Welcome to our Program! \n");
+		        }
+		    }
+		      
+		    class Intro2 extends Intro {
+		        
+		        @Override
+		        void show()
+		        {
+		        	System.out.println("With this program, you can calculate cost of shipping. \n");
+		        }
+		    }
+		    
+		    Intro obj1 = new Intro();
+		    obj1.show();
+		    Intro obj2 = new Intro2();
+		    obj2.show();
+		   
 			// this gives the variables the numbers 
-			finalProject s = new finalProject();
-			System.out.println("This is the Potintal Prices:");
-			System.out.println(s.sum(13.0, 5.0));
-			System.out.println(s.sum(16.0, 5.0, 0.0));
-			System.out.println(s.sum(19.0, 5.0));
+			System.out.println("Smallest box shipping price:" + ' ' + '$' + smallBox());
+			System.out.println("Medium box shipping price:" + ' ' + '$' + medBox());
+			System.out.println("Largest box shipping price:" + ' ' + '$' + largeBox());
 		   
 			// These system.out.printlns should be visible to the
 			// user when the program starts.
 			// Here, we've indicated the states that are available for a user to ship to.
 			// More to this, we corresponded each given state with a number. 
-		  System.out.println("States:");
-			System.out.println("1=NC, 2=SC");
-		    System.out.println("3=TX, 4=AL");
-		    System.out.println("5=LA, 6=FL");
-		    System.out.println("7=GA, 0= If you don't see your states initals. \n");
+			abstract class StateNames {
+
+				 
+				  public void namep1() {
+					  	System.out.println('\n' + "Here are the available states that we currently ship to!");
+					  	System.out.println("1= North Carolina" + '\n' + "2= South Carolina");
+					    System.out.println("3= Georgia" + '\n' + "4= Florida");    
+				  }
+				}
+				class Names extends StateNames {
+				  public void namep2() {
+					  	System.out.println("5= Alabama" + '\n' + "6= Mississippi");
+					    System.out.println("7= Louisiana" + '\n' + "8= Texas");
+					    System.out.println("9= Tennessee" + '\n' + "0= If you do not see the desired state \n");
+				  }
+				}
+			Names area = new Names(); 
+		    area.namep1();
+		    area.namep2();
 		    
 		 // Here, the user can input what state he or she would like to ship to.
-		    System.out.print("Let's get started, where are you shipping to? ");
+		    System.out.print("Let's get started, where are you shipping to? \n");
 		      state = keyboard.nextInt();
 		    // This is the start of our switch statement.   
 		    switch (state) {
 		      case 1:
-		    	  // Delivery is available to NC.
-		        System.out.println("We deliver To North Carolina");
+		        System.out.println("We are able to deliver to North Carolina");
 		        break;
 		      case 2:
-		    	  // Delivery is available to SC.
-		        System.out.println("We deliver to South Carolina");
+		        System.out.println("We are able to deliver to South Carolina");
 		        break;
 		      case 3:
-		    	 // Delivery is available to TX.
-		        System.out.println("We deliver to Texas");
+		        System.out.println("We are able to deliver to Georgia");
 		        break;
 		      case 4:
-		    	  // Delivery is available to AL.
-		        System.out.println("We deliver to Alabama");
+		        System.out.println("We are able to deliver to Florida");
 		       break;
 		      case 5:
-		    	  // Delivery is available to LA.
-		        System.out.println("We deliver to Louisiana");
+		        System.out.println("We are able to deliver to Alabama");
 		       break;
 		      case 6:
-		    	  // Delivery is available to FL.
-		        System.out.println("We deliver to Florida");
+		        System.out.println("We are able to deliver to Mississippi");
 		       break;
 		      case 7:
-		    	  // Delivery is available to GA.
-		        System.out.println("We deliver to Gorgia");
+		        System.out.println("We are able to deliver to Louisianna");
 		        break;
-		        
+		      case 8:
+		      	System.out.println("We are able to deliver to Texas");
+		      	break;
+		      case 9:
+		    	  System.out.println("We are able to deliver to Tennessee");
+		      break;
 		        // This is the message to the user if delivery is not
-		        // available to his or her state. 
+		        // available to their desired state. 
 		      default:
-		            System.out.println("We do not diliver to your state.");
+		            System.out.println("Sadly, we are unable to deliver to your area at this time.");
 		    }
+		 // Each element of these arrays are initialized.
+	    	   // Each array corresponds with a size.
+	            	final int SIZE = 4;
+	            	String[] names = new String [SIZE];
+	            	names[0] = "\nSmall Box = 0";
+	            	names[1] = "Medium Box = 1";
+	            	names[2] = "Large Box = 2";
+	            	
+	            	// String objects have many methods, 
+	            	// here, we use the toUppercase--> method
+	            	// This is an example of an array.
+	            	// The first bracket on each line indicates a row.
+	            	  System.out.println(names[0].toUpperCase());
+	            	  System.out.println(names[1].toUpperCase());
+	            	  System.out.println(names[2].toUpperCase());
+	            	  
+	            	  System.out.println();
+	            	  
+	            	 //CharAt--> single character at a specified location
+	            	  char letter = names[2].charAt(0);
+	            	   System.out.print(letter);
+	            	      
+	            	   System.out.println();
 
-		           // Each element of these arrays are initialized.
-		    	   // Each array corresponds with a size.
-		            	final int SIZE = 4;
-		            	String[] names = new String [SIZE];
-		            	names[0] = "Small Box = 0";
-		            	names[1] = "Medium Box = 1";
-		            	names[2] = "Large Box = 2";
-		            	
-		            	// String objects have many methods, 
-		            	// here, we use the toUppercase--> method
-		            	// This is an example of an array.
-		            	// The first bracket on each line indicates a row.
-		            	  System.out.println(names[0].toUpperCase());
-		            	  System.out.println(names[1].toUpperCase());
-		            	  System.out.println(names[2].toUpperCase());
-		            	  
-		            	  System.out.println();
-		            	  
-		            	 //CharAt--> single character at a specified location
-		            	  char letter = names[2].charAt(0);
-		            	   System.out.print(letter);
-		            	      
-		            	   System.out.println();
+	            	   System.out.print("Great, what size do you want? ");
+	     		      int Box = keyboard.nextInt();
+	     		     if (Box==0 ) {
+	     		    	  System.out.println("For a small size, that will be and extra $13");
+	     		     }
+	     		     else if (Box==1 ) {
+	     		      		System.out.println("For a medium size, that will be and extra $16");
+	     		      	}
+	     		      	else if (Box==2 ) {
+			            System.out.println("For a large size, that will be and extra $19");
+	     		      	}
+	     	
+	     		    int objectCount;
+	     			  
+	     		    //  This makes three instances of the 
+	     		   //  class.
+	     		   finalProject object1 = new finalProject();
+	     		  finalProject object2 = new finalProject();
+	     		 finalProject object3 = new finalProject();
 
-		            	   System.out.print("Great, what size do you want? ");
-		     		      int Box = keyboard.nextInt();
-		     		     if (Box==0 ) {
-		     		    	  System.out.println("For a small size, that will be and extra $13");
-		     		     }
-		     		     else if (Box==1 ) {
-		     		      		System.out.println("For a medium size, that will be and extra $16");
-		     		      	}
-		     		      	else if (Box==2 ) {
-				            System.out.println("For a large size, that will be and extra $19");
-		     		      	}
-		     	
-		     		    int objectCount;
-		     			  
-		     		    //  This makes three instances of the 
-		     		   //  class.
-		     		   finalProject object1 = new finalProject();
-		     		  finalProject object2 = new finalProject();
-		     		 finalProject object3 = new finalProject();
-
-		     		   
-		     		 //This calls the statics from above and prints the words
-		     		   objectCount = ( object1).getInstanceCount();
-		     		   System.out.println(objectCount + 
-		     		                 " dollars is the shiping cost to diliver to  " +
-		     		                 "eligable states.");
-		     		}
-// this tells you the cost to ship to each eligible state
-		     		private int getInstanceCount() {
-		     			
-		     			return 5;
-		     		}
-		     		 public void SuperClass1()
-		     		 {
-		     			 
-		     			 
-		     		 
-		     		 }
-		     		
-		     		}
+	     		   
+	     		 //This calls the statics from above and prints the words
+	     		   objectCount = ( object1).getInstanceCount();
+	     		   System.out.println(objectCount + 
+	     		                 " dollars is the shiping cost to diliver to  " +
+	     		                 "eligable states.");
+	     		}
+//this tells you the cost to ship to each eligible state
+	     		private int getInstanceCount() {
+	     			
+	     			return 5;
+	     		}
+	     		 public void SuperClass1()
+	     		 {
+	     			 
+	     			 
+	     		 
+	     		 }
+	     		
+	     		}     		
+		  
