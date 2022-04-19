@@ -11,6 +11,9 @@
 package finalProject;
 // Here, we imported a scanner to read the system out prints.
 import java.util.Scanner;
+
+import finalProject.finalProject.finalproject;
+
 // Here, we imported the statement, import java.util.Arrays;, 
 // to call the String method on array elements.
 import java.util.Arrays;
@@ -46,6 +49,17 @@ class Intro2 extends Intro {
     	System.out.println("With this program, you can calculate cost of shipping. \n");
     }
 }
+ 
+class EncapSize{
+	private String size;
+	public String getSize() {
+		return size;
+	}
+	public void setSize(String newSize) {
+		size = newSize;
+	}
+}
+
 //This is where we have placed our abstract class.
 //Here we have placed all the states we are shipping to, and the corresponding number of the state.
 abstract class StateNames {
@@ -64,12 +78,41 @@ abstract class StateNames {
 		    System.out.println("9= Tennessee" + '\n' + "0= If you do not see the desired state \n");
 	  }
 	}
-
+	
 
 // This is the name of our class and package.
 public class finalProject {
-	  //This is our method overload, where we have determined the price and names of the boxes.
+	// This is our example of an abstract interface.
+	  public interface finalproject {
+
+	}
+	static //This is our method overload, where we have determined the price and names of the boxes.
 		// Shows price of cheapest box with shipping 
+	
+	// Here we define the variables x and y, to be included using,
+	// the 'this' with a class attribute
+	int x;
+	// Here, we made the int y static to resolve to resolve an error.
+	static int y;
+	
+	
+	// Here is the constructor with a parameter using the 'this' keyword.
+	public finalProject(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public finalProject() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public static void main1(String[] args) {
+		finalProject myObj = new finalProject(x, y);
+		System.out.println("These are the variables associated with x " + myObj.x);
+		System.out.println("These are the variables associated with y " + myObj.y);
+		
+	}
 		public static int sum(int x, int y)
 		{
 			return (x + y);
@@ -122,7 +165,7 @@ public static void main(String[] args) {
 		    area.namep2();
 		    
 		 // Here, the user can input what state he or she would like to ship to.
-		    System.out.print("Let's get started, where are you shipping to? \n");
+		    System.out.print("Let's get started, please type the corresponding number to where you want to ship to!  \n");
 		      state = keyboard.nextInt();
 		    // This is the start of our switch statement.   
 		    switch (state) {
@@ -160,30 +203,22 @@ public static void main(String[] args) {
 		    }
 		 // Each element of these arrays are initialized.
 	    	   // Each array corresponds with a size.
-	            	final int SIZE = 4;
+	          final int SIZE = 4;
 	            	String[] names = new String [SIZE];
 	            	names[0] = "\nSmall Box = 0";
 	            	names[1] = "Medium Box = 1";
 	            	names[2] = "Large Box = 2";
 	            	
-	            	// String objects have many methods, 
-	            	// here, we use the toUppercase--> method
-	            	// This is an example of an array.
-	            	// The first bracket on each line indicates a row.
-	            	  System.out.println(names[0].toUpperCase());
-	            	  System.out.println(names[1].toUpperCase());
-	            	  System.out.println(names[2].toUpperCase());
-	            	  
-	            	  System.out.println();
-	            	  
-	            	 //CharAt--> single character at a specified location
-	            	  char letter = names[2].charAt(0);
-	            	   System.out.print(letter);
-	            	      
-	            	   System.out.println();
-
-	            	   System.out.print("Great, what size do you want? ");
-	     		      int Box = keyboard.nextInt();
+	            	   EncapSize encap = new EncapSize();
+	            
+	            	   encap.setSize("\nGreat, please type what size box you want.");	            	   
+	            	   System.out.println(encap.getSize());
+	            	   
+	            	   System.out.println(names[0].toUpperCase());
+	            	   System.out.println(names[1].toUpperCase());
+		               System.out.println(names[2].toUpperCase());
+	            	   
+   		      int Box = keyboard.nextInt();
 	     		     if (Box==0 ) {
 	     		    	  System.out.println("For a small size, that will be and extra $13");
 	     		     }
@@ -194,15 +229,11 @@ public static void main(String[] args) {
 			            System.out.println("For a large size, that will be and extra $19");
 	     		      	}
 	     	
-	     		    int objectCount;
+	     		     int objectCount = 0;
 	     			  
-	     		    //  This makes three instances of the 
-	     		   //  class.
+	     		    //  This makes new instances of the class.
 	     		   finalProject object1 = new finalProject();
-	     		  finalProject object2 = new finalProject();
-	     		 finalProject object3 = new finalProject();
-
-	     		   
+	     		 	     		   
 	     		 //This calls the statics from above and prints the words
 	     		   objectCount = ( object1).getInstanceCount();
 	     		   System.out.println(objectCount + 
@@ -221,5 +252,4 @@ public static void main(String[] args) {
 	     		 
 	     		 }
 	     		
-	     		}     		
-		  
+	     		}   
