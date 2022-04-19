@@ -18,20 +18,6 @@ import finalProject.finalProject.finalproject;
 // to call the String method on array elements.
 import java.util.Arrays;
 
-
-class location {
-// this is an example of an inheritance class.
-// this includes methods and fields for this class.
-}
-
-class State extends location {
-// extends is the keyword used in this inheritance class.
-// the methods and fields in this example are State,
-// and location.
-// The State extends the location. 
-// The user should input the specific state that he or she,
-// wants to ship to, the specific location. 
-}
 //This is how we use the method override.
 //We use the override to start the program and use the opening messages to the user.
 class Intro {
@@ -49,7 +35,8 @@ class Intro2 extends Intro {
     	System.out.println("With this program, you can calculate cost of shipping. \n");
     }
 }
- 
+
+//Using encapsulation to output the question for getting the size
 class EncapSize{
 	private String size;
 	public String getSize() {
@@ -79,6 +66,24 @@ abstract class StateNames {
 	  }
 	}
 	
+	class ending {
+		void show() 
+		{
+	// this is an example of an inheritance class.
+	// this includes methods and fields for this class.
+		System.out.println("\n With this information you should be able to measure the amount it will cost to \n ship to the designated location! \n");
+		}
+	}
+	class ending2 extends ending {
+		void show ()
+		{
+	// extends is the keyword used in this inheritance class.
+	// the methods and fields in this example are ending,
+	// and ending2.
+	// The ending2 extends the ending.  
+			System.out.println("\n Hopefully you enjoyed the our Program. \n \n By Seth T., Samantha S., and Josiah R.");
+		}
+	}
 
 // This is the name of our class and package.
 public class finalProject {
@@ -131,15 +136,15 @@ public class finalProject {
 		}
 		//The Smallest box method
 		static int smallBox() {
-		return sum(13, 5);
+		return sum(10, 0);
 		}
 		//The Medium size box method
 		static int medBox() {
-		return sum(13, 8);
+		return sum(10, 5);
 		}
 		//The Largest size box method
 		static int largeBox() {
-		return sum (13, 11);
+		return sum (10, 10);
 		} 
 		
 		
@@ -220,36 +225,25 @@ public static void main(String[] args) {
 	            	   
    		      int Box = keyboard.nextInt();
 	     		     if (Box==0 ) {
-	     		    	  System.out.println("For a small size, that will be and extra $13");
+	     		    	  System.out.println("For a small size, that will cost $10 to ship.");
 	     		     }
 	     		     else if (Box==1 ) {
-	     		      		System.out.println("For a medium size, that will be and extra $16");
+	     		      		System.out.println("For a medium size, that will cost $15 to ship.");
 	     		      	}
 	     		      	else if (Box==2 ) {
-			            System.out.println("For a large size, that will be and extra $19");
+			            System.out.println("For a large size, that will cost $20 to ship.");
 	     		      	}
-	     	
-	     		     int objectCount = 0;
+	     		      	else if (Box>=2 ) {
+				            System.out.println("Sorry, but that number does not match with any listed number.  Try again.");
+				           
+				            
+		     		      	}
+	     		    ending endobj1 = new ending();
+	    		    endobj1.show();
+	    		    ending endobj2 = new ending2();
+	    		    endobj2.show();
+	     		    
 	     			  
-	     		    //  This makes new instances of the class.
-	     		   finalProject object1 = new finalProject();
-	     		 	     		   
-	     		 //This calls the statics from above and prints the words
-	     		   objectCount = ( object1).getInstanceCount();
-	     		   System.out.println(objectCount + 
-	     		                 " dollars is the shiping cost to diliver to  " +
-	     		                 "eligable states.");
-	     		}
-//this tells you the cost to ship to each eligible state
-	     		private int getInstanceCount() {
-	     			
-	     			return 5;
-	     		}
-	     		 public void SuperClass1()
-	     		 {
-	     			 
-	     			 
-	     		 
-	     		 }
-	     		
+	     		   
+}
 	     		}   
