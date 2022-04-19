@@ -213,12 +213,12 @@ public static void main(String[] args) {
 	            	names[0] = "\nSmall Box = 0";
 	            	names[1] = "Medium Box = 1";
 	            	names[2] = "Large Box = 2";
-	            	
+	            	//Calling the encapsulation to show the box size
 	            	   EncapSize encap = new EncapSize();
-	            
+	            	   // outputting the box size question
 	            	   encap.setSize("\nGreat, please type what size box you want.");	            	   
 	            	   System.out.println(encap.getSize());
-	            	   
+	            	   //The user inputs a int to show their desired box size.
 	            	   System.out.println(names[0].toUpperCase());
 	            	   System.out.println(names[1].toUpperCase());
 		               System.out.println(names[2].toUpperCase());
@@ -238,6 +238,7 @@ public static void main(String[] args) {
 				           
 				            
 		     		      	}
+	     		    //Calling the inheritance class to output the ending
 	     		    ending endobj1 = new ending();
 	    		    endobj1.show();
 	    		    ending endobj2 = new ending2();
